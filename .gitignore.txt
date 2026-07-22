@@ -1,0 +1,11 @@
+# Bỏ qua thư mục .vs ở mọi nơi
+**/.vs/
+.vs/
+
+# Bỏ qua bin và obj ở mọi nơi
+**/bin/
+**/obj/
+
+# Bỏ qua các file cấu hình người dùng
+*.user
+*.suo

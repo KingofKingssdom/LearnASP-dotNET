@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\test\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|solutionrelative:test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\test\\test\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|solutionrelative:test\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\test\\test\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|solutionrelative:test\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\test\\test\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|solutionrelative:test\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\test\\test\\test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6A5AD4E4-616D-407C-BEC0-46031B2AED76}|Test\\Test.csproj|solutionrelative:test\\test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\appsettings.json",
+              "RelativeDocumentMoniker": "Test\\appsettings.json",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\appsettings.json",
+              "RelativeToolTip": "Test\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-22T02:11:27.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Test\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Test\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T01:40:51.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Test\\WeatherForecast.cs",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\WeatherForecast.cs",
+              "RelativeToolTip": "Test\\WeatherForecast.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T01:40:47.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Test",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\Test.csproj",
+              "RelativeDocumentMoniker": "Test\\Test.csproj",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\Test.csproj",
+              "RelativeToolTip": "Test\\Test.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-22T01:38:41.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\Program.cs",
+              "RelativeDocumentMoniker": "Test\\Program.cs",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\Test\\Test\\Program.cs",
+              "RelativeToolTip": "Test\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T01:34:04.647Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1630,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{be4d7042-ba3f-11d2-840e-00c04f9902c1}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

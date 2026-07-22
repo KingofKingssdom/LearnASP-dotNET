@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\appsettings.json",
+              "RelativeDocumentMoniker": "HttpLogging\\appsettings.json",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\appsettings.json",
+              "RelativeToolTip": "HttpLogging\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-22T03:31:55.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "HttpLogging\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "HttpLogging\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T03:28:39.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\Program.cs",
+              "RelativeDocumentMoniker": "HttpLogging\\Program.cs",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\Program.cs",
+              "RelativeToolTip": "HttpLogging\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T03:02:25.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "HttpLogging\\WeatherForecast.cs",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\WeatherForecast.cs",
+              "RelativeToolTip": "HttpLogging\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T03:02:20.007Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1630,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{be4d7042-ba3f-11d2-840e-00c04f9902c1}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
