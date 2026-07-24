@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07EE696A-F292-43B4-BAA9-B9DD7407BB30}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|e:\\learn\\aspdotnet\\basic\\overview\\lythuyetlogging\\httplogging\\httplogging\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D5438A9-5F9A-1E64-8FAD-DB719A595D56}|HttpLogging\\HttpLogging.csproj|solutionrelative:httplogging\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,12 +34,11 @@
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\appsettings.json",
               "RelativeDocumentMoniker": "HttpLogging\\appsettings.json",
-              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\appsettings.json*",
-              "RelativeToolTip": "HttpLogging\\appsettings.json*",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\appsettings.json",
+              "RelativeToolTip": "HttpLogging\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-22T03:31:55.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-22T03:31:55.413Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "HttpLogging\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-22T03:28:39.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-22T03:28:39.921Z"
             },
             {
               "$type": "Document",
@@ -60,9 +58,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\Program.cs",
               "RelativeDocumentMoniker": "HttpLogging\\Program.cs",
-              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\Program.cs*",
-              "RelativeToolTip": "HttpLogging\\Program.cs*",
-              "ViewState": "AgIAABwAAAAAAAAAAAAkwCMAAAAPAAAAAAAAAA==",
+              "ToolTip": "E:\\Learn\\ASPdotNet\\Basic\\Overview\\LyThuyetLogging\\HttpLogging\\HttpLogging\\Program.cs",
+              "RelativeToolTip": "HttpLogging\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-22T03:02:25.226Z",
               "EditorCaption": ""
@@ -77,8 +75,7 @@
               "RelativeToolTip": "HttpLogging\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-22T03:02:20.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-22T03:02:20.007Z"
             }
           ]
         },

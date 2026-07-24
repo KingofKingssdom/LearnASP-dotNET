@@ -1,0 +1,6 @@
+@LythuyetException_HostAddress = http://localhost:5164
+
+GET {{LythuyetException_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

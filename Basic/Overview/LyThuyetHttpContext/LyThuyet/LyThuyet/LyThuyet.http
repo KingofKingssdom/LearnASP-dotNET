@@ -1,0 +1,6 @@
+@LyThuyet_HostAddress = http://localhost:5217
+
+GET {{LyThuyet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HttpLogging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4194402ab766cf123c65faabb19277d8d207a86e")]
 [assembly: System.Reflection.AssemblyProductAttribute("HttpLogging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HttpLogging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
