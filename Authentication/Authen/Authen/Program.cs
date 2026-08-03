@@ -1,7 +1,9 @@
 
-using Auth.Config;
+using Authen.Context;
+using Authen.Properties.Extension;
+using Microsoft.AspNetCore.Identity;
 
-namespace Auth
+namespace Authen
 {
     public class Program
     {
@@ -11,10 +13,12 @@ namespace Auth
 
             // Add services to the container.
             builder.Services.AddDatabase(builder.Configuration);
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
-            
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

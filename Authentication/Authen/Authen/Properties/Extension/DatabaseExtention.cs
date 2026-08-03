@@ -1,13 +1,13 @@
-﻿using Auth.Context;
+﻿using Authen.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace Auth.Config
+namespace Authen.Properties.Extension
 {
-    public static class DatabaseExtension
+    public static class DatabaseExtention
     {
         public static IServiceCollection AddDatabase(
-            this IServiceCollection services,
-            IConfiguration configuration)
+       this IServiceCollection services,
+       IConfiguration configuration)
         {
             services.AddDbContext<AppDbContext>(options =>
             {

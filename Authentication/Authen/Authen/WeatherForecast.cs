@@ -1,4 +1,4 @@
-namespace Auth
+namespace Authen
 {
     public class WeatherForecast
     {
