@@ -19,6 +19,16 @@ Trong file appsettings.json, bạn có thể thêm các thông số cho JWT:
   }
 }
 ```
+**Hiểu thông số:**
+Issuer (Người cấp thẻ - "Ai ban hành?")
++ Ý nghĩa: Là tên/định danh của Authentication Server (Server đứng ra làm nhiệm vụ Login và cấp Token). <br/>
+Ví dụ thực tế: Giống như trên Căn cước công dân của bạn có ghi "Nơi cấp: Cục Cảnh sát Quản lý Hành chính".
++ Tác dụng trong Code: Khi API Server nhận được Token từ Client gửi lên, nó sẽ kiểm tra dòng Issuer này. Nếu Issuer trong Token không khớp với giá trị cấu hình trong appsettings.json, Server sẽ ngay lập tức từ chối vì nghi ngờ Token này do một Server lạ/mạo danh phát hành. <br/>
+**Hiểu thông số:**
+Audience (Đối tượng sử dụng - "Thẻ này dành cho ai?")
++ Ý nghĩa: Là tên/định danh của Client hoặc Service được phép sử dụng Token này để truy cập tài nguyên.<br/>
+Ví dụ thực tế: Bạn mua vé xem phim, trên vé ghi rõ "Dành cho: Rạp CGV Landmark 81". Bạn không thể mang vé đó sang rạp Lotte Cinema để xem được. <br/>
+Tác dụng trong Code: Giúp bảo vệ hệ thống trong mô hình Microservices hoặc khi bạn có nhiều app khác nhau (như Web Admin, Mobile App, Partner App). Server sẽ kiểm tra xem Token này tạo ra có phải để dành riêng cho hệ thống/app của mình dùng hay không.
 
 **Bước 3: Cấu hình JWT Authentication trong ứng dụng** <br/>
 Trong file Program.cs (cho ASP.NET Core 6 trở lên), cấu hình authentication như sau:
