@@ -221,7 +221,13 @@ app.UseHttpsRedirection();
 // Phục vụ file .css, .js, hình ảnh từ wwwroot mà không cần qua Routing/Auth
 // =========================================================================
 app.UseStaticFiles(); 
-
+// Ngoài ra nếu không muốn đọc file tĩnh từ wwwroot mà một nơi khác thì cấu hình
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "MyStaticFiles")),
+    RequestPath = "/static" // URL truy cập sẽ là: https://localhost:port/static/filename.jpg
+});
 // Dành riêng cho .NET 9+ (Tối ưu hóa tải tài nguyên tĩnh)
 // app.MapStaticAssets();
 
