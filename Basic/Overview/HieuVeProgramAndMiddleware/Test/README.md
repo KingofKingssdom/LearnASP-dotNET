@@ -318,3 +318,119 @@ Bảng tóm tắt nhanh
 |5|Auth (Authentication -> Authorization)|Bắt buộc Xác thực danh tính trước rồi mới Phân quyền truy cập.|
 |6|Session & Caching|Đặt sau Auth để dữ liệu phiên làm việc được gắn đúng với User đã đăng nhập.|
 |7|Endpoints (Map...)|Đặt cuối cùng để nhận request đã qua kiểm duyệt sạch sẽ và trả về dữ liệu.|
+## V. Các phương thức của  Tạo Builder & Đăng ký Dịch vụ (Service Container / DI)
+Trong ASP.NET Core, builder.Services có kiểu dữ liệu là IServiceCollection. Đây là nơi đăng ký tất cả các dịch vụ (Services), cấu hình khung làm việc (Frameworks), cơ sở dữ liệu và thiết lập vòng đời cho hệ thống Dependency Injection (DI) trước khi gọi builder.Build().
+### 1. Nhóm Đăng ký Vòng đời Dependency Injection (Service Lifetimes)
+- Dùng để đăng ký các class/interface tự định nghĩa vào hệ thống DI container.
+    + ```AddTransient<TService, TImplementation>()```: Tạo ra một instance mới mỗi khi dịch vụ được yêu cầu (mỗi nơi inject là 1 đối tượng mới).
+    + ```AddScoped<TService, TImplementation>()```: Tạo ra 1 instance duy nhất cho mỗi HTTP Request.
+    + ```AddSingleton<TService, TImplementation>()```: Tạo ra duy nhất 1 instance cho toàn bộ thời gian ứng dụng chạy.
+    + ```AddKeyedTransient / AddKeyedScoped / AddKeyedSingleton``` (từ .NET 8): Đăng ký dịch vụ đính kèm với một chìa khóa (Key) định danh.
+    + ```AddHostedService<THostedService>()```: Đăng ký một tác vụ chạy ngầm (Background Service / Worker) chạy song song với ứng dụng.
+```C#
+// Đăng ký dịch vụ thông thường
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddSingleton<ICacheService, CacheService>();
+
+// Keyed Services (.NET 8+)
+builder.Services.AddKeyedSingleton<INotificationService, SmsService>("sms");
+builder.Services.AddKeyedSingleton<INotificationService, EmailService>("email");
+
+// Background Worker
+builder.Services.AddHostedService<DataCleanupWorker>();
+```
+### 2. Nhóm Cơ sở Dữ liệu & Data Access (Database & EF Core)
+- Cấu hình các bộ kết nối cơ sở dữ liệu và Entity Framework Core.
+    + ```AddDbContext<TContext>(options => ...)```: Đăng ký DbContext của EF Core với vòng đời Scoped
+    + ```AddDbContextPool<TContext>(options => ...)```: Tối ưu hiệu năng bằng cách tái sử dụng (pool) các instance của DbContext
+    + ```AddDatabaseDeveloperPageExceptionFilter()```: Hiển thị trang báo lỗi chi tiết liên quan đến Migration của EF Core ở môi trường Dev.
+```C#
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+```
+### 3. Nhóm Khung làm việc Web & API (Web Frameworks & Routing)
+- Đăng ký các bộ điều hướng giao diện hoặc API tương ứng với kiến trúc dự án.
+    + AddControllers(): Đăng ký hỗ trợ cho Web API thuần (không kèm View HTML).
+    + AddControllersWithViews(): Đăng ký hỗ trợ cho mô hình MVC (Controllers + Razor Views).
+    + AddRazorPages(): Đăng ký hỗ trợ cho kiến trúc Razor Pages.
+    + AddRazorComponents() (từ .NET 8): Đăng ký hỗ trợ cho Blazor Web App.
+    + AddEndpointsApiExplorer(): Cho phép Minimal API xuất thông tin Endpoint cho Swagger/OpenAPI.
+    + AddOpenApi() (từ .NET 9): Bộ sinh tài liệu OpenAPI tích hợp sẵn của Microsoft.
+```C#
+builder.Services.AddControllers(); // Cho Web API
+// builder.Services.AddControllersWithViews(); // Cho MVC
+// builder.Services.AddRazorPages(); // Cho Razor Pages
+
+builder.Services.AddEndpointsApiExplorer(); // Dành cho Minimal API
+builder.Services.AddOpenApi(); // Sinh file openapi/v1.json (.NET 9+)
+```
+### 4. Nhóm Xác thực & Phân quyền (Authentication & Authorization)
+- Quản lý đăng nhập, cấp Token và kiểm tra quyền truy cập của người dùng.
+   + AddAuthentication(): Khởi tạo hệ thống xác thực (kèm .AddJwtBearer(), .AddCookie(), .AddOpenIdConnect(),...)
+   + AddAuthorization(): Khai báo các chính sách phân quyền (Policies / Roles).
+   + ```AddIdentity<TUser, TRole>()```: Đăng ký toàn bộ hệ thống quản lý User/Role của ASP.NET Core Identity.
+   + ```AddIdentityApiEndpoints<TUser>()``` (từ .NET 8): Tự động sinh sẵn các Endpoint API đăng ký, đăng nhập, đổi mật khẩu.
+```C#
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options => {
+        options.TokenValidationParameters = new TokenValidationParameters { /* ... */ };
+    });
+
+builder.Services.AddAuthorization(options => {
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+});
+```
+### 5. Nhóm Bảo mật, CORS & Chống giả mạo (Security)
+ + AddCors(options => ...): Cấu hình chia sẻ tài nguyên giữa các tên miền (Cross-Origin Resource Sharing).
+ + AddAntiforgery(options => ...): Bảo vệ ứng dụng khỏi các cuộc tấn công CSRF/XSRF.
+ + AddDataProtection(): Khởi tạo cơ chế mã hóa/giải mã dữ liệu nội bộ (Data Protection API).
+```C#
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
+builder.Services.AddAntiforgery();
+builder.Services.AddDataProtection();
+```
+### 6. Nhóm Bộ nhớ đệm, Nén dữ liệu & Giới hạn (Caching, Compression & Rate Limiting)
+- Tối ưu hóa băng thông, tốc độ phản hồi và chống quá tải server.
+    + AddMemoryCache(): Sử dụng bộ nhớ RAM local của server làm cache.
+    + AddDistributedMemoryCache() / AddStackExchangeRedisCache(): Sử dụng bộ nhớ đệm phân tán (Redis).
+    + AddHybridCache() (từ .NET 9): Kết hợp giữa Memory Cache và Distributed Cache (chống hiện tượng Cache Stampede).
+    + AddResponseCompression(): Nén dữ liệu Response trả về client (Gzip/Brotli).
+    + AddOutputCache(): Lưu đệm toàn bộ kết quả HTML/JSON trả về từ Endpoint.
+    + AddRateLimiter(): Giới hạn số lượng Request/giây chống spam/DDoS.
+### 7. Nhóm Tài liệu API, Chẩn đoán & Ghi Log (Swagger & Telemetry)
+- AddSwaggerGen(): Tạo giao diện dùng thử và tài liệu API tương tác với thư viện Swashbuckle.
+- AddHttpLogging(): Đăng ký ghi log chi tiết HTTP Request/Response (Header, Body, Duration).
+- AddProblemDetails(): Trả về cấu trúc lỗi chuẩn hóa theo RFC 7807 khi xảy ra exception.
+- AddOpenTelemetry(): Thu thập thông tin vết (Tracing) và chỉ số hiệu năng (Metrics) hệ thống.
+```C#
+builder.Services.AddSwaggerGen();
+builder.Services.AddProblemDetails();
+builder.Services.AddHttpLogging(logging => {
+    logging.LoggingFields = HttpLoggingFields.All;
+});
+```
+### 8. Nhóm Cấu hình & Dịch vụ Mở rộng (Configuration & Utilities)
+- ```Configure<TOptions>(builder.Configuration.GetSection(...))```: Ánh xạ (bind) một section trong appsettings.json thành một class C# theo Options Pattern.
+- AddSignalR(): Kích hoạt truyền tải dữ liệu thời gian thực (Real-time Web WebSocket).
+- ```AddHttpClient() / AddHttpClient<TService, TImplementation>()```: Quản lý và khởi tạo các đối tượng HttpClient tối ưu kết nối mạng.
+- AddHealthChecks(): Cung cấp đường dẫn kiểm tra sức khỏe hệ thống (Database, Disk, RAM).
+- AddLocalization(): Hỗ trợ đa ngôn ngữ cho ứng dụng.
+```C#
+// Options Pattern
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+
+// SignalR & HttpClient
+builder.Services.AddSignalR();
+builder.Services.AddHttpClient<IWeatherApiClient, WeatherApiClient>();
+
+// Health Checks
+builder.Services.AddHealthChecks();
+```

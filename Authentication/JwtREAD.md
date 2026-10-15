@@ -36,3 +36,90 @@ ví dụ: SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 Cuối cùng 3 mã trên kết hợp lại thành một token gửi cho client
 
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+## III. Cách cấp phát jwt trong ASP .Net
+Khi người dùng gửi thành công Username/Password ở API /api/auth/login, bạn tạo và trả về chuỗi JWT Token như sau:
+```C#
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+
+public string GenerateJwtToken(string userId, string email, string role, IConfiguration config)
+{
+    // 1. Lấy Secret Key từ appsettings.json (độ dài tối thiểu 16-32 ký tự)
+    var secretKey = config["JwtSettings:SecretKey"]!;
+    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+    // 2. Định nghĩa các thông tin (Claims) chứa trong Token
+    var claims = new[]
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, userId),
+        new Claim(JwtRegisteredClaimNames.Email, email),
+        new Claim(ClaimTypes.Role, role),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+    };
+
+    // 3. Cấu hình thông số Token
+    var tokenDescriptor = new SecurityTokenDescriptor
+    {
+        Subject = new ClaimsIdentity(claims),
+        Expires = DateTime.UtcNow.AddHours(2), // Token có hiệu lực trong 2 giờ
+        Issuer = config["JwtSettings:Issuer"],
+        Audience = config["JwtSettings:Audience"],
+        SigningCredentials = creds
+    };
+
+    // 4. Sinh chuỗi Token
+    var tokenHandler = new JwtSecurityTokenHandler();
+    var token = tokenHandler.CreateToken(tokenDescriptor);
+    return tokenHandler.WriteToken(token);
+}
+```
+## IV. Cách cấu hình Validate Token trong Program.cs
+Cần cài đặt thư viện NuGet: Microsoft.AspNetCore.Authentication.JwtBearer
+Trong Program.cs, bạn đăng ký middleware để ASP.NET Core tự động giải mã và kiểm tra Token cho mỗi request gửi tới:
+```C#
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+
+var builder = WebApplication.CreateBuilder(args);
+
+var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+var secretKey = jwtSettings["SecretKey"]!;
+
+// 1. Đăng ký dịch vụ Authentication với Bearer Scheme
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,            // Bắt buộc kiểm tra thời gian hết hạn (exp)
+        ValidateIssuerSigningKey = true,     // Bắt buộc đối chiếu chữ ký bằng SecretKey
+        ValidIssuer = jwtSettings["Issuer"],
+        ValidAudience = jwtSettings["Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+        ClockSkew = TimeSpan.Zero           // Triệt tiêu độ trễ 5 phút mặc định của hệ thống
+    };
+});
+
+builder.Services.AddAuthorization();
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+// 2. Kích hoạt Middleware (BẮT BUỘC: Authentication đứng TRƯỚC Authorization)
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+app.Run();
+```
